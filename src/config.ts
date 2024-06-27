@@ -1,68 +1,37 @@
 import type { NavigationLink, Site, User } from './types.ts'
 
 export const SITE: Site = {
-    author: 'Godruoyi',
+    author: 'SAMLI',
     url: 'https://godruoyi.com',
-    title: '连波的闲谈杂鱼',
-    description: 'Godruoyi\'s personal blog, I enjoy the process of building something using any technology stack',
+    title: 'AIGC提示词大全',
+    description: '天天开心',
     shortDescription: '',
 }
 
 export const NavigationLinks: NavigationLink[] = [
-    { name: 'Posts', url: '/posts' },
-    { name: 'Category', url: '/categories' },
-    { name: 'Timeline', url: '/timeline' },
-    { name: 'About', url: '/posts/about-godruoyi' },
-    { name: 'Friends', url: '/friends' },
-]
-
-export const Friends: User[] = [
-    {
-        avatar: 'https://tcxx.info/wp-content/themes/StarryW/images/bg/me.jpg',
-        social: { twitter: 'Tiancaixinxin', blog: 'https://tcxx.info/', github: 'TCXX' },
-        title: '我不是天才，我只是甜菜。',
-        name: '甜欣屋',
-        description: '技术圈的欧阳娜娜，旅居美国硅谷，生命不息作死不止，探索人生无限可能，女权主义者，希望世界和平',
-    },
-    {
-        avatar: 'https://avatars.githubusercontent.com/u/21162238?v=4',
-        social: { twitter: 'Tiancaixinxin', blog: 'https://www.xqy404.com/', github: 'QuentinHsu' },
-        title: 'Web Developer',
-        name: 'Quentin Hau',
-        description: '人生本就過的不愉快 那就來點羅曼蒂克',
-    },
-    {
-        avatar: 'https://avatars.githubusercontent.com/u/6493255?v=4',
-        social: { twitter: 'draven0xff', blog: 'https://draveness.me/', github: 'draveness' },
-        title: '一个工程师',
-        name: 'Draven',
-        description: 'Go 语言设计与实现作者，偶像',
-    },
-    {
-        avatar: 'https://pbs.twimg.com/profile_images/1598673328155262977/c_95AZZ8_400x400.jpg',
-        social: { twitter: 'brendt_gd', github: 'brendt' },
-        title: 'dev adv@phpstorm',
-        name: 'Brent Roose',
-        description: 'All In PHP & Laravel',
-    },
+    { name: '提示词大全', url: '/posts' },
+    { name: '系列', url: '/categories' },
+    { name: '时间线', url: '/timeline' },
+    { name: '友好链接', url: '/posts/url' },
 ]
 
 export const FooterLinks = [
     {
-        section: 'Blog',
+        section: '汇总',
         links: [
-            { name: 'Posts', url: '/posts' },
-            { name: 'Timeline', url: '/timeline' },
-            { name: 'Categories', url: '/categories' },
-            { name: 'About Me', url: '/posts/about-godruoyi' },
+            { name: '提示词大全', url: '/posts' },
+            { name: '系列', url: '/timeline' },
+            { name: '时间线', url: '/categories' },
         ],
     },
     {
-        section: 'Other',
+        section: '友好链接',
         links: [
-            { name: 'RSS', url: '/rss.xml' },
-            { name: 'Site Map', url: '/sitemap-index.xml' },
-            { name: 'Twitter', url: 'https://x.com/godruoyi' },
+            { name: 'chatgpt', url: 'https://openai.com/chatgpt/' },
+            { name: 'kimi', url: 'https://kimi.moonshot.cn/' },
+            { name: '讯飞星火', url: 'https://xinghuo.xfyun.cn/' },
+            { name: 'deepseek', url: 'https://www.deepseek.com/zh' },
+            { name: '文心一言', url: 'https://yiyan.baidu.com/welcome?tn=39042058_34_oem_dg&ie=utf-8' },
         ],
     },
 ]

@@ -1,36 +1,97 @@
 ---
-title: "Blog 的延续"
-description: "最近花了一些时间将我的博客迁移到了 Astro 平台，我感觉整个过程挺美妙的，很喜欢 Astro。"
-pubDate: "2024-05-16 13:06:49"
-category: "life"
-banner: "@images/posts/blog-3/banner-1.png"
-banner2: "@images/posts/blog-3/banner-2.png"
+title: "后缀提示词"
+description: "有时候在提问后加入一些后缀会有意想不到的效果！"
+pubDate: "2024-06-27 13:06:49"
+category: "tool"
+banner: "@images/banners/6.jpg"
+banner2: "@images/banners/6.jpg"
 tags: ["Astro", "Blog"]
 selected: true
 ---
+## 后缀提示词
 
-最近花了一些时间将我的博客迁移到了 Astro 平台，我感觉整个过程挺美妙的，很喜欢 Astro。
+有时候在提问后加入一些后缀会有意想不到的效果！以下是一些后缀提示词和相应的实例：
 
-博客迁移的初衷是因为我的主机被腾讯云封禁了。因为域名到期后未续费导致被解析到一个有辱国家斯文的网站，我的主机被永久封禁不得申诉。于是我将自己的博客迁移到了 [Fly](https://fly.io) 平台上，而 Fly 每个月 6/7 刀的费用又让我不堪重负。
+<style>
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+}
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.card-example {
+  font-size: 1em;
+  color: #555;
+}
+.card-instance {
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 5px;
+}
+</style>
 
-我在 `2015-12-25` 注册了自己的第一个域名，并一直用到了现在，我已经忘记当时部署的是什么网站，隐约记得写了个 LOVE 阿宝 FOREVER。以前觉得互联网上的东西都能保存十年百年，而现在 9 年不到我之前写的任何内容已经了无踪迹。互联网是没有记忆的。大学期间写的几十篇日记还在我的贵人鸟鞋盒里静静地躺着。
+<div class="card">
+  <div class="card-title">1. 请详细解释一下。</div>
+  <div class="card-example">例句：为什么天空是蓝色的？请详细解释一下。</div>
+  <div class="card-instance">实例：天空是蓝色的主要原因是大气层对阳光的散射。阳光包括多种颜色，每种颜色的波长不同。短波长的蓝光更容易被空气中的小颗粒散射开来，这种散射称为瑞利散射。因此，当阳光进入地球大气层时，蓝光被散射到各个方向，我们从各个角度看到的天空就是蓝色的。</div>
+</div>
 
-想象前两次博客的改版，我从 Symfony 博客迁移到 Laravel 再到 Golang Gin；每一次迁移都会造成数据丢失，每一次迁移都要折腾很久的云环境。从如何安装 PHP、安装 Nginx、安装 Redis、安装 MySQL、安装 Docker、安装 Clash、配置 [Acme.sh](https://github.com/Neilpang/acme.sh)。我的网站能正常运行完全是因为恰巧这些服务都正常工作。
+<div class="card">
+  <div class="card-title">2. 能否列出具体步骤？</div>
+  <div class="card-example">例句：如何制作苹果派？能否列出具体步骤？</div>
+  <div class="card-instance">实例：制作苹果派的步骤如下：首先，准备派皮，将面粉、黄油和少量的水混合揉成面团。然后，将苹果去皮切片，加糖和肉桂粉拌匀。将面团擀成两片，将一片铺在派盘上，放入苹果片，再盖上另一片面团。最后，刷上蛋液，在派顶上切几道口子，放入预热好的烤箱中烘烤约45分钟，直到表面金黄。</div>
+</div>
 
-你能想象两年内它完全是运行在下面这样的脚本中吗？我甚至都没有为他配置 [Restart Policies](https://docs.docker.com/config/containers/start-containers-automatically/) 或者 Supervisor，相当于只要程序一 Panic，网站就挂了。
+<div class="card">
+  <div class="card-title">3. 请给出相关的实例。</div>
+  <div class="card-example">例句：什么是商业伦理？请给出相关的实例。</div>
+  <div class="card-instance">实例：商业伦理是指企业在经营过程中遵循的道德原则和规范。一个实例是某公司决定不使用廉价的童工，即使这样做能降低生产成本。该公司认为这样做不仅能维护企业的声誉，还能对社会负责。</div>
+</div>
 
-```shell
-docker run --name gblog -p 9900:9900 -d ${imageName}
-```
+<div class="card">
+  <div class="card-title">4. 这种情况下的典型例子是什么？</div>
+  <div class="card-example">例句：什么是市场细分？这种情况下的典型例子是什么？</div>
+  <div class="card-instance">实例：市场细分是指根据消费者的不同特征将市场划分为不同的部分，从而更有针对性地进行营销。一个典型例子是汽车市场，汽车制造商根据收入水平、需求和偏好将市场划分为经济型、中型和豪华型汽车，从而满足不同消费者的需求。</div>
+</div>
 
-博客应该被静态化，我心里这样想着。静态化的博客可以部署到任何 Serverless 平台中，一个个 HTML 页面就包含了你博客的所有数据，它们不会因为你忘记续费就停止服务，也不会因为你的定时脚本出错了就不能 HTTPS 访问，更不会因为你忘记配置 Clash 就无法使用 GitHub 登录。你所有需要做的，就是提交你的博客内容；Git 记录了你所有的操作历史，只要 GitHub 不倒，你的网站久依旧能地老天荒。
+<div class="card">
+  <div class="card-title">5. 这种情况有例外吗？</div>
+  <div class="card-example">例句：所有哺乳动物都生活在陆地上吗？这种情况有例外吗？</div>
+  <div class="card-instance">实例：并非所有哺乳动物都生活在陆地上，一些哺乳动物生活在水中。海豚和鲸鱼就是生活在海洋中的哺乳动物，它们在水中生活和繁殖，与陆地上的哺乳动物有很大的不同。</div>
+</div>
 
-我写博客的初衷是为了多年后能自省当年的自己，看看当时的心态。我比较厌烦流水账的记录，所以更多的时候我愿意写下此刻的感悟；我不明白为什么很多人的年终总结要写一月份干了什么二月份干了什么，十年后的你在回首时真的在乎你某年某月干了什么吗？
+<div class="card">
+  <div class="card-title">6. 能否分析一下其背后的原理？</div>
+  <div class="card-example">例句：为什么冰在水中会浮起来？能否分析一下其背后的原理？</div>
+  <div class="card-instance">实例：冰在水中浮起来的原因是冰的密度比水低。水在结冰时，其分子结构形成六边形晶格，使得分子间的距离变大，从而降低了密度。因此，冰的密度小于液态水，导致冰会浮在水面上。</div>
+</div>
 
-### 截图
+<div class="card">
+  <div class="card-title">7. 这对整体的影响是什么？</div>
+  <div class="card-example">例句：全球变暖会带来哪些影响？这对整体的影响是什么？</div>
+  <div class="card-instance">实例：全球变暖会导致海平面上升、极端天气增加、生物多样性减少和生态系统破坏。这对整体的影响是环境变得更加不稳定，许多物种面临灭绝的风险，人类的生活质量也会受到严重影响，如粮食产量下降、水资源短缺和更多的自然灾害。</div>
+</div>
 
-按照约定，放几张新版本博客的截图。
+<div class="card">
+  <div class="card-title">8. 这种情况的前因后果是什么？</div>
+  <div class="card-example">例句：引起经济危机的主要原因是什么？这种情况的前因后果是什么？</div>
+  <div class="card-instance">实例：引起经济危机的主要原因包括金融市场的不稳定、过度借贷和房地产泡沫。其前因是金融机构的高风险操作和监管不力，后果是大规模的企业倒闭、失业率上升、社会不稳定和全球经济衰退。</div>
+</div>
 
-![Godruoyi Blog](@images/posts/blog-3/home.png)
-![Godruoyi Categories](@images/posts/blog-3/categories.png)
-![Godruoyi Timeline](@images/posts/blog-3/timeline.png)
+<div class="card">
+  <div class="card-title">9. 请比较一下不同的解决方案。</div>
+  <div class="card-example">例句：如何应对空气污染问题？请比较一下不同的解决方案。</div>
+  <div class="card-instance">实例：应对空气污染的问题有多种解决方案，比如推广清洁能源、实施严格的排放标准和提高公众环保意识。推广清洁能源如太阳能和风能可以减少化石燃料的使用，实施严格的排放标准可以直接限制污染物的排放，提高公众环保意识可以促使人们积极参与环保行动。各方案都有其优缺点，综合运用效果最佳。</div>
+</div>
+
+<div class="card">
+  <div class="card-title">10. 能否总结一下关键点？</div>
+  <div class="card-example">例句：如何提高工作效率？能否总结一下关键点？</div>
+  <div class="card-instance">实例：提高工作效率的关键点包括：制定清晰的目标和计划、优先处理重要任务、减少干扰和分心、合理安排休息时间以及持续学习和提升技能。通过这些措施，可以更有效地管理时间和精力，从而提高工作效率。</div>
+</div>
